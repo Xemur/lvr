@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Kreon:wght@300;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Kreon:wght@300;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.bg-blue{
+    background-color: #001D6E;
+}
+
+.bg-red{
+    background-color: #CE1126;
+}
+.font-blue{
+    color: #001D6E;
+}
+
+.font-red{
+    color: #CE1126;
+}
+
+.font-keron-light{
+    font-family: 'Kreon', serif;
+    font-weight: 300;
+}
+
+.font-keron-bold{
+    font-family: 'Kreon', serif;
+    font-weight: 700;
+}
+
+.h-custom-ultra{
+    height:450px;
+}
+
+.box-shadow{
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
+}
+
+.bottom-custom-42{
+    bottom: 10.4rem;
+}
+
+.first-view{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0)),url('bg1.jpg');
+    background-color: blue;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height:550px;
+    min-width:100%;
+}
+
+.w-1050{
+    width:1050px;
+}
+
+.text-custom-top{
+    font-size: 27px;
+}
+
+.text-opacity-blue{
+    color: rgba(0,29,110,0.55);
+}
+
+.border-b-blue{
+    border-bottom-color: #001D6E;
+}
+
+.faq {
+    max-width: 1200px;
+    margin-top:1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #001D6E;
+    cursor: pointer;
+}
+
+.faq-container{
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom:60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.question{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.answer p {
+    padding-top: 1rem;
+    line-height: 1.5;
+    font-size: 1.4rem;
+}
+
+.answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease;
+    
+}
+
+.faq.active .answer {
+    max-height: 1000px;
+    animation: fade 1s ease-in-out;
+}
+
+.faq.active svg {
+    transform:rotate(180deg);    
+}
+
+.faq svg {
+    transition: transform 0.5s ease-in;
+}
+
+footer{
+    color: #fff;
+}
+
+nav ul li {
+    padding-left:30px;
+    padding-right:30px;
+    height: 100%;
+    position: relative;
+}
+
+
+@keyframes fade {
+    from {
+        transform: translateY(-10px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+
+.dropdown_menu{
+    display: none;
+}
+
+.dropdown_menu ul{
+    width: 340px;
+    display: block;
+    margin-top: 13px;
+    padding-left: 0px;
+
+}
+
+.dropdown_menu ul li{
+    
+    margin: 0 0 10px 0;
+}
+
+nav ul li:hover .dropdown_menu{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: white;
+    z-index: 50;
+}
+
+
+.base-font-size {
+    font-size: 1.4rem;
+}
+
+.w-custom {
+    width: 1500px;
+}
+
+.avantages__img{
+    background-image: url(img.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+@media (max-width: 1025px) {
+    .avantages__img {
+      height: 350px;
+    }
+  }
+
+.avantages__content{
+    background-color: rgba(0,29,110,0.1);
+}
+/* .avantages, .map {
+    margin: 60px 0 50px 0;
+    height: 450px;
+}
+.avantages .avantages__img {
+    
+    background-image: url(img.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height:450px;
+    
+} 
+
+
+.avantages__content  {
+
+    height:450px;
+    
+    background-color: rgba(0,29,110,0.1);
+} */
+
+
+.map__container {
+    width:50%;
+    height:100%;
+}
+
+.avantages__content li {
+   color: #001D6E;
+   font-size: 25px;
+}
+
+.map__content{
+    width:50%;
+    height:100%;
+}
+.map__container img {
+    display: block;
+    margin: auto;
+    max-height: 100%;
+    
+}
+
+nav a{
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    padding-bottom: 5px;
+}
+nav a::after{
+    content:"";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1.5px;
+    background-color:#CE1126;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .5s;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+    transform-origin:left;
+}
+
+.bg-blue-opacity{
+    background-color: rgba(0,29,110,0.1);
+}
+
+.icon-middle{
+    display: grid;
+    align-items: center;
+}
+
+.min-w-835{
+    min-width: 835px;
+}
+
+.h-100{
+    height:350px;
+}
+
+.bg-modal {
+    background-color: rgba(0,0,0,0.5);
+}
+
+.w-500px {
+    width: 600px;
+}
+
+#modal-1 input::placeholder {
+    color:rgba(0,29,110,0.55);
+}
