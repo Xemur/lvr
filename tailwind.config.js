@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       screens:{
-        'bp':'1200px',
+        'bp':{'max':'1200px'},
         'bp2':{'max':'1025px'}
       }
     }
